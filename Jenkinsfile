@@ -6,7 +6,7 @@ pipeline{
         stage("Build docker file and push"){
 
             environment {
-                DOCKER_IMAGE = "sushank3/todo_app:v1:v${BUILD_NUMBER}"
+                DOCKER_IMAGE = "sushank3/todo_app:v${BUILD_NUMBER}"
                 REGISTRY_CREDENTIALS = credentials('dockerhub')
             }
 
